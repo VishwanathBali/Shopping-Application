@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 const BagSummary = () => {
     const bags = useSelector(store => store.bag)
     const items = useSelector(store => store.items)
-    const itemList = items.filter(item => bags.includes(item.id))
+    const itemList = items.filter(item => bags.includes(item._id))
     const totalItem = bags.length
     const totalMRP = itemList.reduce((sum,item) => sum + item.original_price,0)
     const actualMRP = itemList.reduce((sum,item) => sum + item.current_price,0)

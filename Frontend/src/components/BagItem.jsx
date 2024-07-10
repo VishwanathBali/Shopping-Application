@@ -7,12 +7,12 @@ const BagItem = ({item}) => {
   const dispatch = useDispatch()
 
   const handleRemove = () => {
-    dispatch(bagAction.removeFromBag(item.id))
+    dispatch(bagAction.removeFromBag(item._id))
   }
   return (
     <div className="bag-item-container">
       <div className="item-left-part">
-        <img className="bag-item-img" src={item.image} />
+        <img className="bag-item-img" src={item.product_image} />
       </div>
       <div className="item-right-part">
         <div className="company">{item.company}</div>

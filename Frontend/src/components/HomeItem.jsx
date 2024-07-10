@@ -3,20 +3,21 @@ import { useDispatch, useSelector } from 'react-redux'
 import { bagAction } from '../store/bagSlice'
 
 const HomeItem = ({item}) => {
+  console.log(item)
   const bag = useSelector(store => store.bag)
-  const itemFound = bag.indexOf(item.id)>=0
+  const itemFound = bag.indexOf(item._id)>=0
   const dispatch = useDispatch()
 
   const handleAdd = () => {
-    dispatch(bagAction.addToBag(item.id))
+    dispatch(bagAction.addToBag(item._id))
   }
 
   const handleRemove = () => {
-    dispatch(bagAction.removeFromBag(item.id))
+    dispatch(bagAction.removeFromBag(item._id))
   }
   return (
     <div className="item-container">
-      <img className="item-image" src={item.image} alt="item image"/>
+      <img className="item-image" src={item.product_image} alt="item image"/>
       <div className="rating">
           {item.rating.stars} ⭐ | {item.rating.count}
       </div>

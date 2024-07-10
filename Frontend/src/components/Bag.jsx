@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 const Bag = () => {
     const bag = useSelector(store => store.bag)
     const items = useSelector(store => store.items)
-    const itemList = items.filter(item => bag.includes(item.id))
+    const itemList = items.filter(item => bag.includes(item._id))
   return (
     <>
       <main>
