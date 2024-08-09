@@ -20,6 +20,15 @@ header {
 }
 .action_bar {
   margin-right: 4%;
+  cursor: pointer;
+}
+
+.profile_container {
+  color: #282c3f;
+}
+
+.profile_container:hover {
+  border-bottom: 4px solid #f54e77;
 }
 .nav_bar {
   display: flex;
@@ -378,4 +387,69 @@ a.action_container:link {
 
 .spinner {
   margin: 100px 0px;
+}
+
+.login {
+  display: grid;
+  place-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid lightgray;
+  padding: 50px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1)
+}
+
+.form-input {
+  width: 300px;
+  height: 45px;
+  padding: 0 10px;
+  margin-bottom: 20px;
+  font-size: 17px;
+  border-radius: 3px;
+  border: 1px solid lightgray;
+  outline: none;
+}
+
+.form-input:hover {
+  outline: 2px solid lightgray;
+}
+
+.form-checkbox {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-checkbox > input {
+  margin-top: 4px;
+  margin-right: 5px;
+}
+
+.form-span {
+  color: #f54e77;
+}
+
+.login-form > button {
+  width: 300px;
+  height: 45px;
+  background-color: #f54e77;
+  color: white;
+  font-size: 17px;
+  border-radius: 3px;
+  border: none;
+}
+
+.button-span {
+  margin-top: 6px;
 }

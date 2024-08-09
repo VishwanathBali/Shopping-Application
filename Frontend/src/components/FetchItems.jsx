@@ -12,9 +12,8 @@ const FetchItems = () => {
         if (fetchStatus.fetchDone) return
 
         const controller = new AbortController();
-        const signal = controller.signal;
         dispatch(fetchStatusAction.markFetchingStarted())
-        axios.get("http://localhost:8000/api/v1/cart")
+        axios.get("/api/v1/cart")
         .then((response)=>{
           console.log(response.data.cart)
           dispatch(fetchStatusAction.markFetchDone())
